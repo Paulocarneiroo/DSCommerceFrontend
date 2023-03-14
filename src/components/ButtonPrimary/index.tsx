@@ -1,14 +1,19 @@
 import './styles.css';
 
-const ButtonPrimary = () => {
+type Props = {
+    text: string;
+}
+
+
+const ButtonPrimary = ({ text }: Props) => {
     return (
         <>
             <div className="dsc-btn dsc-btn-blue">
-                Comprar
+                {text}
             </div>
         </>
 
     )
 }
 
-export default ButtonPrimary
+export default ButtonPrimary;
