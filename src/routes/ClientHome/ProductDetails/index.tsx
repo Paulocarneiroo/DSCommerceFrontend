@@ -1,43 +1,32 @@
+import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import ButtonInverse from '../../../components/ButtonInverse';
 import ButtonPrimary from '../../../components/ButtonPrimary';
 import HeaderClient from '../../../components/HeaderClient';
 import ProductDetailsCard from '../../../components/ProductDetailsCard';
-import { ProductDTO } from '../../../models/product';
+import * as productService from '../../../services/product-service';
 import './styles.css';
 
-
-const product: ProductDTO = {
-    id: 2,
-    name: "Smart TV",
-    description: "Esta TV é muito bonita",
-    imgUrl: "https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/2-big.jpg",
-    price: 2500.99,
-    categories: [
-        {
-            id: 1,
-            name: "Eletrônicos"
-        },
-        {
-            id: 3,
-            name: "Computadores"
-        },
-        {
-            id: 4,
-            name: "Importados"
-        }
-    ]
-}
-
 const ProductDetails = () => {
+
+    const params = useParams();
+    const product = productService.findById(Number(params.productId));
+
     return (
         <>
             <>
                 <main>
                     <section id="product-details-section" className="dsc-container">
-                        <ProductDetailsCard product = {product} />
+                        {
+                            product &&
+                            <ProductDetailsCard product={product} />
+                        }
                         <div className="dsc-btn-page-container">
-                            <ButtonPrimary text="Comprar"/>
-                            <ButtonInverse text="Início"/>
+                            <ButtonPrimary text="Comprar" />
+                            <Link to="/">
+                                <ButtonInverse text="Início" />
+                            </Link>
+
                         </div>
                     </section>
                 </main>

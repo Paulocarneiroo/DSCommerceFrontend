@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './styles.css';
 
 type Props = {
@@ -8,7 +9,7 @@ const ButtonInverse = ({ text }: Props) => {
     return (
         <>
             <div className="dsc-btn dsc-btn-white">
-                {text}
+                    {text}
             </div>
         </>
 

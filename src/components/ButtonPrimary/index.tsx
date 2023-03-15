@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './styles.css';
 
 type Props = {
@@ -9,7 +10,7 @@ const ButtonPrimary = ({ text }: Props) => {
     return (
         <>
             <div className="dsc-btn dsc-btn-blue">
-                {text}
+                    {text}
             </div>
         </>
 
