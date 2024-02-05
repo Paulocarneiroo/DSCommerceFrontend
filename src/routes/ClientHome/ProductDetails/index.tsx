@@ -6,11 +6,25 @@ import HeaderClient from '../../../components/HeaderClient';
 import ProductDetailsCard from '../../../components/ProductDetailsCard';
 import * as productService from '../../../services/product-service';
 import './styles.css';
-
+import { useEffect, useState } from 'react';
+import { ProductDTO } from '../../../models/product';
+import axios from 'axios';
 const ProductDetails = () => {
 
     const params = useParams();
-    const product = productService.findById(Number(params.productId));
+
+    const [product, setProduct] = useState<ProductDTO>();
+
+    useEffect(() => {
+        productService.findById(Number(params.productId))
+            .then(response => {
+                setProduct(response.data);
+            });
+
+
+        //const prod = productService.findById(Number(params.productId));
+        //setProduct(prod);
+    }, []);
 
     return (
         <>
@@ -26,7 +40,6 @@ const ProductDetails = () => {
                             <Link to="/">
                                 <ButtonInverse text="Início" />
                             </Link>
-
                         </div>
                     </section>
                 </main>
