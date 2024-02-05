@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import ButtonInverse from '../../../components/ButtonInverse';
 import ButtonPrimary from '../../../components/ButtonPrimary';
@@ -12,6 +12,7 @@ import axios from 'axios';
 const ProductDetails = () => {
 
     const params = useParams();
+    const navigate = useNavigate();
 
     const [product, setProduct] = useState<ProductDTO>();
 
@@ -19,7 +20,9 @@ const ProductDetails = () => {
         productService.findById(Number(params.productId))
             .then(response => {
                 setProduct(response.data);
-            });
+            }).catch(() => {
+                navigate("/");
+            })
 
 
         //const prod = productService.findById(Number(params.productId));
