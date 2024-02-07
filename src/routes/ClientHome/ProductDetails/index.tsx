@@ -9,6 +9,10 @@ import './styles.css';
 import { useEffect, useState } from 'react';
 import { ProductDTO } from '../../../models/product';
 import axios from 'axios';
+import { addProduct } from '../../../services/cart-service';
+import * as cartService from '../../../services/cart-service';
+
+
 const ProductDetails = () => {
 
     const params = useParams();
@@ -29,6 +33,13 @@ const ProductDetails = () => {
         //setProduct(prod);
     }, []);
 
+    function handleBuyClick(){
+        if(product){
+            cartService.addProduct(product);
+            navigate("/cart");
+        }
+    }
+
     return (
         <>
             <>
@@ -39,7 +50,9 @@ const ProductDetails = () => {
                             <ProductDetailsCard product={product} />
                         }
                         <div className="dsc-btn-page-container">
-                            <ButtonPrimary text="Comprar" />
+                            <div onClick={handleBuyClick}>
+                                <ButtonPrimary text="Comprar" />
+                            </div>
                             <Link to="/">
                                 <ButtonInverse text="Início" />
                             </Link>
