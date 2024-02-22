@@ -37,4 +37,4 @@ const SearchBar = ({onSearch} : Props) => {
     )
 }
 
-export default SearchBar
+export default SearchBar;

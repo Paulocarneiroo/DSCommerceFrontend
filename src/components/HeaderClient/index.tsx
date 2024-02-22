@@ -1,8 +1,13 @@
 import { Link } from 'react-router-dom';
-import cartIcon from '../../assets/cart.svg';
 import './styles.css';
+import CartIcon from '../CartIcon';
+import * as cartService from "../../services/cart-service";
+import { useState } from 'react';
 
 const HeaderClient = () => {
+
+    const [countIcon, setCountIcon] = useState(0);
+
     return (
         <>
             <header className="dsc-header-client">
@@ -12,11 +17,11 @@ const HeaderClient = () => {
                     </Link>
                     <div className="dsc-navbar-right">
                         <div className="dsc-menu-items-container">
-                            <div className="dsc-menu-item">
-                                <Link to="/cart">
-                                    <img src={cartIcon} alt="Carrinho de compras" />
-                                </Link>
-                            </div>
+                            <Link to="/cart">
+                                <div className="dsc-menu-item">
+                                    <CartIcon />
+                                </div>
+                            </Link>
                         </div>
                         <Link to="/login">
                             Entrar
