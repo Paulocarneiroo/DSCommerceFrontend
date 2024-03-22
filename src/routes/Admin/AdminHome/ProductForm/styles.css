@@ -1,0 +1,35 @@
+
+#product-form-section {
+    padding: 20px 0;
+  }
+  
+  .dsc-product-form-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .dsc-product-form-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dsc-btn-cancel {
+    margin-bottom: 20px;
+  }
+  
+  @media (min-width: 576px) {
+    #product-form-section {
+      padding: 40px 0;
+    }
+  
+    .dsc-product-form-buttons {
+      flex-direction: row;
+    }
+  
+    .dsc-btn-save {
+      margin-left: 20px;
+    }
+  }
+  
