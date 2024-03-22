@@ -6,4 +6,4 @@ export const CLIENT_ID = "myclientid";
 
 export const CLIENT_SECRET = "myclientsecret";
 
-export const TOKEN_KEY = 'com.devsuperior.dscommerce/Token';
+export const TOKEN_KEY = 'com.devsuperior.pscommerce/Token';

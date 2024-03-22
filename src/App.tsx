@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
-import Admin from './routes/Admin';
-import AdminHome from './routes/Admin/AdminHome';
+import Admin from './routes/Admin'
+import AdminHome from './routes/Admin/AdminHome'
 import ClientHome from './routes/ClientHome';
 import Cart from './routes/ClientHome/Cart';
 import Catalog from './routes/ClientHome/Catalog';
@@ -11,13 +11,13 @@ import { ContextCartCount } from './utils/context-cart';
 import { PrivateRoute } from './components/PrivateRoute';
 import { AccessTokenPayloadDTO } from './models/auth';
 import { ContextToken } from './utils/context-token';
-import Confirmation from './routes/ClientHome/Confirmation';
-import { unstable_HistoryRouter as HistoryRouter } from 'react-router-dom';
-import { history } from './utils/history';
+import Confirmation from './routes/ClientHome/Confirmation'
+import { history } from './utils/history'
 import * as authService from './services/auth-service';
 import * as cartService from './services/cart-service';
 import ProductListing from './routes/Admin/AdminHome/ProductListing';
 import ProductForm from './routes/Admin/AdminHome/ProductForm';
+import { unstable_HistoryRouter as HistoryRouter } from 'react-router-dom';
 
 export default function App() {
   //PROVER O CONTEXTO GLOBALMENTE - Instanciar um useState em App.tsx

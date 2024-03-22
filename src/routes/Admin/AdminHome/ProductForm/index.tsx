@@ -7,8 +7,6 @@ import FormTextArea from '../../../../components/FormTextArea';
 import { CategoryDTO } from '../../../../models/category';
 import * as productService from '../../../../services/product-service';
 import * as categoryService from '../../../../services/category-service';
-import FormSelect from '../../../../components/FormSelect';
-import { selectStyles } from '../../../../utils/select';
 import Select from 'react-select';
 
 export default function ProductForm() {
