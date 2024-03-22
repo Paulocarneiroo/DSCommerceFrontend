@@ -1,0 +1,5 @@
+.dsc-btn-inverse-admin {
+    border: 1px solid var(--dsc-color-btn-primary-admin);
+    background-color: var(--dsc-color-btn-inverse);
+    color: var(--dsc-color-btn-primary-admin);
+  }
