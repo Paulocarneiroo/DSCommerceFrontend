@@ -1,0 +1,5 @@
+.dsc-btn-primary-admin {
+    border: none;
+    background-color: var(--dsc-color-btn-primary-admin);
+    color: var(--dsc-color-font-quartiary);
+  }
