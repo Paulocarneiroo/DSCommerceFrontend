@@ -34,7 +34,7 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 Antes de começar, você vai precisar ter instalado:
 
 - **Node.js** (versão recomendada atual)
-- **npm** ou **Yarn** (gerenciador de pacotes)
+- **Yarn** (gerenciador de pacotes)
 
 ---
 
