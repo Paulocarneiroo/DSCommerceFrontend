@@ -1,4 +1,4 @@
-# DSCommerceFrontend 🚀
+# DSCommerceFrontend 🛒
 
 Front-end da aplicação **DSCommerce**, um projeto de e-commerce desenvolvido como parte dos estudos de desenvolvimento web.
 👨‍💻 Esta interface foi construída com **React, TypeScript e Vite** e consome APIs para apresentar funcionalidades de loja online, como listagem de produtos, carrinho de compras, páginas responsivas e integração com backend.  
@@ -16,7 +16,7 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 ---
 
-## 🚀 Principais Recursos
+## 💻 Principais Recursos
 
 ✔️ Navegação entre páginas  
 ✔️ Listagem de produtos  
@@ -59,7 +59,6 @@ yarn dev
 ```
 
 ---
-
 ## 📁 Integração com Backend
 
 Este front-end foi projetado para funcionar em conjunto com o **backend DSCommerce**, que disponibiliza uma **API REST** responsável pelas regras de negócio, autenticação e persistência de dados.
@@ -69,10 +68,11 @@ Este front-end foi projetado para funcionar em conjunto com o **backend DSCommer
 🔗 Repositório do backend:  
 https://github.com/Paulocarneiroo/DSCOMMERCE-PROJECT
 
+---
 ## 🎥 Demonstração
 
 Abaixo está uma demonstração visual da interface do projeto **DSCommerceFrontend**, exibindo o fluxo principal de navegação e as funcionalidades implementadas no sistema.
 
-![Demonstração da aplicação](./docs/demo.gif)
+![Demonstração da aplicação](./docs/demoDSC.gif)
 
 
